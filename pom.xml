@@ -80,7 +80,31 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>deploy</phase>
+						<configuration>
+							<project>
+								<packaging>jar</packaging>
+							</project>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-
+<!--	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>https://repo.maven.apache.org/maven2/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>https://repo.maven.apache.org/maven2/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+-->
 </project>
