@@ -28,7 +28,7 @@ pipeline {
 		}
 		stage('Dockerize'){
 			steps{
-				sh "docker build -t exam"
+				sh "docker build -t exam ."
 			}
 		}
 		
